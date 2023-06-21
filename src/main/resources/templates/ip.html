@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IP Address</title>
+</head>
+<body>
+<form th:align="center" role="form" method="get" th:action="@{/ip}" th:object="${ipAddress}">
+   <span> <h1>your ip:</h1><h1 th:text="${ipAddress}"></h1> </span>
+</form>
+</body>
+</html>

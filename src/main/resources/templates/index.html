@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Client Ip Address</title>
+</head>
+<style type="text/css">
+    label {
+        display: inline-block;
+        width: 200px;
+        margin: 5px;
+        text-align: left;
+    }
+    input[type=text], input[type=email], input[type=password], select {
+        display: inline-block;
+        width: 200px;
+    }
+    input[type=radio] {
+        margin-left: 45px;
+    }
+    input[type=checkbox] {
+        margin-right: 190px;
+    }
+    button {
+        padding: 5px;
+        margin: 10px;
+    }
+</style>
+<body>
+  <form th:align="center" role="form" method="post" th:action="@{/location}" th:object="${geoLocation}">
+      <span>IP:</span><span th:text="${geoLocation.getIpAddress()}"></span><br/>
+      <span>City:</span><span th:text="${geoLocation.getCity()}"></span><br/>
+      <span>Latitude:</span><span th:text="${geoLocation.getLatitude()}"></span><br/>
+      <span>Longitude:</span><span th:text="${geoLocation.getLongitude()}"></span><br/>
+  </form>
+ </body>
+</html>
